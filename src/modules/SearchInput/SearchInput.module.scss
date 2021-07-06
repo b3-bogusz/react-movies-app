@@ -1,0 +1,30 @@
+.root {
+  color: grey;
+  padding: 0.8rem;
+  position: relative;
+}
+
+.input {
+  width: 20rem;
+  height: 4rem;
+  background-color: transparent;
+  color: white;
+  outline: none;
+  border: 1px solid #FC00FF;
+  border-radius: 2.5rem;
+  cursor: pointer;
+  padding: 0.2rem 0.2rem 0.2rem 5rem;
+  font-size: 1.4rem;
+  font-weight: 300;
+
+  &::placeholder {
+    color: grey;
+  }
+}
+
+.svg {
+  position: absolute;
+  top: 50%;
+  left: 2.5rem;
+  transform: translateY(-50%);
+}

@@ -1,0 +1,20 @@
+.root {
+  width: 100%;
+  color: white;
+  background-color: black;
+  min-height: 100vh;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 1.6rem;
+  margin-top: 20vh;
+  color: grey;
+}
+
+.svg {
+  margin-bottom: 2rem;
+}
