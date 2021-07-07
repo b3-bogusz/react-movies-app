@@ -2,13 +2,18 @@ import React from 'react';
 import styles from './MovieCard.module.scss';
 import Svg from "../../../components/Svg/Svg";
 import {iconStar} from "../../../assets/svg/svg";
+import {Link} from "react-router-dom";
+import getSlugFromTitle from "../../../utils/getSlugFromTitle";
 
 const starsArray = [1, 2, 3, 4, 5];
 
 const  MovieCard = ({movie}) => {
 
     return (
-        <div className={styles.root}>
+        <Link
+            className={styles.root}
+            to={`/movie/${movie.imdbID}/details/${getSlugFromTitle(movie.Title)}`}
+        >
             <img
                 alt={movie.title}
                 className={styles.img}
@@ -31,7 +36,7 @@ const  MovieCard = ({movie}) => {
             <div className={styles.title}>
                 {movie.Title}
             </div>
-        </div>
+        </Link>
     );
 }
 

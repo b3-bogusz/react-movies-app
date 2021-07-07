@@ -6,7 +6,7 @@ import MovieDetailsView from "../../views/MovieDetailsView/MovieDetailsView";
 const BaseRoutes = () => (
     <Switch>
         <Route exact path="/" component={SearchView}/>
-        <Route exact path="/movie" component={MovieDetailsView}/>
+        <Route exact path="/movie/:id/details/:slug" component={MovieDetailsView}/>
     </Switch>
 );
 
