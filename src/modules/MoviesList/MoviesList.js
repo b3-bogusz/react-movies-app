@@ -11,7 +11,10 @@ const MoviesList = ({ movies }) => {
         return (
             <MovieCard
                 key={movie.imdbID}
-                movie={movie}
+                id={movie.imdbID}
+                posterUrl={movie.Poster}
+                title={movie.Title}
+                year={movie.Year}
             />
         )
     });
@@ -22,7 +25,5 @@ const MoviesList = ({ movies }) => {
         </div>
     );
 }
-
-
 
 export default MoviesList;

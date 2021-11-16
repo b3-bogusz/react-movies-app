@@ -13,7 +13,10 @@ const appSlice = createSlice({
         },
         setPageNumber(state, { payload }) {
             state.pageNumber = payload
-        }
+        },
+        setTotalResults(state, { payload}) {
+            state.totalResults = payload
+        },
     }
 })
 
@@ -21,6 +24,7 @@ export const {
     setSearchedMovies,
     setLastSearchedQuery,
     setPageNumber,
+    setTotalResults,
 } = appSlice.actions;
 
 export default appSlice.reducer;

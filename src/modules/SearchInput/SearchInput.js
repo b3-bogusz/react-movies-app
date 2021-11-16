@@ -5,6 +5,7 @@ import {
     setSearchedMovies,
     setLastSearchedQuery,
     setPageNumber,
+    setTotalResults
 } from "../../store/reducers/appSlice/appSlice";
 import Svg from "../../components/Svg/Svg";
 import {iconSearch} from "../../assets/svg/svg";
@@ -17,6 +18,7 @@ const SearchInput = ({
     setLastSearchedQueryAction,
     setPageNumberAction,
     setIsLoadingAction,
+    setTotalResultsAction,
 }) => {
     const [searchTerm, setSearchTerm] = useState('');
 
@@ -54,7 +56,7 @@ const SearchInput = ({
             <Svg
                 className={styles.svg}
                 icon={iconSearch}
-                size={1.6}
+                size={1.3}
             />
             <input
                 type="text"
@@ -79,6 +81,7 @@ const mapsDispatchToProps = {
     setSearchedMoviesAction: setSearchedMovies,
     setLastSearchedQueryAction: setLastSearchedQuery,
     setPageNumberAction: setPageNumber,
+    setTotalResultsAction: setTotalResults,
 }
 
 export default connect(mapStateToProps, mapsDispatchToProps)(SearchInput);

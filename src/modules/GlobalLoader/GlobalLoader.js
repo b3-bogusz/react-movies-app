@@ -9,7 +9,7 @@ const GlobalLoader = ({
  }) => {
 
     if (!isLoading) {
-        return null
+        return false
     }
 
     return (

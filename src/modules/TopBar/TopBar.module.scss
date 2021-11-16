@@ -1,14 +1,59 @@
+@import './src/styles/variables';
+
 .root {
-  background-color: black;
   display: flex;
-  justify-content: space-between;
-  padding: 3rem;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 10rem;
+  background-color: $black;
+  padding-top: 1.5rem;
+
+  @media #{$tablet-768-up} {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
 }
 
-.logoWrapper {
+.logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
 
+  @media #{$tablet-768-up} {
+    flex: 2;
+    justify-content: flex-start;
+    margin-bottom: 0;
+  }
 }
 
-.searchInputWrapper {
+.search {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+  @media #{$tablet-768-up} {
+    flex: 4;
+  }
+
+  @media #{$desktop-1024-up} {
+    flex: 2;
+  }
+}
+
+.navLinks {
+  display: none;
+
+  @media #{$desktop-1024-up} {
+    display: flex;
+    flex: 2;
+  }
+}
+
+.goBack {
+  font-size: 1.6rem;
+  color: lighten($accent-color, 10%);
 }

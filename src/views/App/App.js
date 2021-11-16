@@ -6,10 +6,12 @@ import GlobalLoader from "../../modules/GlobalLoader/GlobalLoader";
 
 const App = () => (
     <div className={styles.root}>
-        <GlobalLoader />
-        <Router>
-            <BaseRoutes />
-        </Router>
+        <div className={styles.container}>
+            <GlobalLoader />
+            <Router>
+                <BaseRoutes />
+            </Router>
+        </div>
     </div>
 );
 

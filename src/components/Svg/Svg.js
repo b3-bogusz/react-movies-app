@@ -1,13 +1,13 @@
 import React from 'react';
 
 const Svg = ({
-    className,
+    svgClassName,
     icon,
     size,
 }) => {
     return (
         <svg
-            className={className}
+            className={svgClassName}
             dangerouslySetInnerHTML={{
                 __html: icon.markup,
             }}

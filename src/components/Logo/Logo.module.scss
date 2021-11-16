@@ -1,6 +1,13 @@
+@import './src/styles/variables';
+
 .root {
+  color: white;
   font-size: 2rem;
   font-weight: 700;
-  color: white;
   white-space: nowrap;
+
+  @media #{$tablet-768-up} {
+    margin-right: 2rem;
+    font-size: 2.4rem;
+  }
 }

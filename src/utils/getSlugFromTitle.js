@@ -1,4 +1,3 @@
-
 const getSlugFromTitle = movieTitle => {
     return movieTitle
         .toLowerCase()

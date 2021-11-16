@@ -7,20 +7,24 @@ import getSlugFromTitle from "../../../utils/getSlugFromTitle";
 
 const starsArray = [1, 2, 3, 4, 5];
 
-const  MovieCard = ({movie}) => {
-
-    return (
+const  MovieCard = ({
+   id,
+   posterUrl,
+   title,
+   year
+}) => (
         <Link
             className={styles.root}
-            to={`/movie/${movie.imdbID}/details/${getSlugFromTitle(movie.Title)}`}
+            to={`/movie/${id}/details/${getSlugFromTitle(title)}`}
         >
             <img
-                alt={movie.title}
-                className={styles.img}
-                src={movie.Poster}
+                className={styles.image}
+                loading="lazy"
+                src={posterUrl}
+                alt={title}
             />
             <div className={styles.year}>
-                {movie.Year}
+                {year}
             </div>
             <div className={styles.rating}>
                 {starsArray.map(index => (
@@ -32,12 +36,10 @@ const  MovieCard = ({movie}) => {
                     />
                 ))}
             </div>
-
             <div className={styles.title}>
-                {movie.Title}
+                {title}
             </div>
         </Link>
-    );
-}
+)
 
 export default MovieCard;
